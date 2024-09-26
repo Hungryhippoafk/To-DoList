@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Todo-List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' type='text/css' media='screen' href='mains.css'>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2> Welcome to Jimmys</h2>
+        <h1> To-Do List</h1>
+        <div class="background-container">
+            <div class="day-night"></div>
+
+
+        </div>
+
+
+        <div>
+            <label for="input1"></label>
+            <input type="text" name="input1" placeholder="Enter a task" id="inputTodo">
+            <button type="button" id="addBtn">Add</button>
+
+
+            <h2>Task To-Do</h2>
+
+            <ul id="Saved-list"></ul>
+
+
+            <small id="infoText"></small>
+
+
+
+
+
+            <div class="main">
+            </div>
+            <h4>Click the task to complete or undo</h4>
+
+
+
+
+            <p id="countTodo">0 Completed
+            <ul id="incomplete-task">
+
+            </ul>
+
+            </p>
+        </div>
+
+        </ul>
+
+        <button id="completed-Btn">Completed Tasks</button>
+        <ul id="completed-tasks" style="display: none;">
+
+        </ul>
+    </div>
+
+
+
+    <script defer src='main.js'></script>
+</body>
+
+</html>
