@@ -74,7 +74,14 @@ addBtn.addEventListener("click", function () {
 
     // Add event listener to remove the item
     trashcan.addEventListener("click", function () {
-        todoItem.remove();
+        let todoText = todoItem.firstChild.textContent; //hittar text från todo
+        let itemIndex = todoArray.findIndex(t => t.name === todoText); 
+
+        if (itemIndex !== -1){
+            todoArray.splice(itemIndex,1); // tar bort från array
+        }
+
+       
         if (todoItem.classList.contains("completed")) {
             completedCount--;
             countTodo.innerText = countTodo.innerText = `Number of completed to-dos: ${completedCount}`;
