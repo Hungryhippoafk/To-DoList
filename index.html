@@ -30,24 +30,14 @@
             <input type="text" name="input1" placeholder="Enter a task" id="inputTodo">
             <button type="button" id="addBtn">Add</button>
 
-
             <h2>Task To-Do</h2>
 
             <ul id="Saved-list"></ul>
-
-
             <small id="infoText"></small>
-
-
-
-
 
             <div class="main">
             </div>
             <h4>Click the task to complete or undo</h4>
-
-
-
 
             <p id="countTodo">0 Completed
             <ul id="incomplete-task">
@@ -59,15 +49,25 @@
 
         </ul>
 
-        <button id="completed-Btn">Completed Tasks</button>
-        <ul id="completed-tasks" style="display: none;">
 
-        </ul>
-    </div>
+        <button id="completed-Btn">Show completed tasks</button>
+        <div id="completed-task-list" style="display: none;">
+            <ul id="completed-tasks">
 
+            </ul>
+        </div>
+        <div class="box">
+            <ul id="completed-tasks" style="display: none;">
+            </ul>
 
+            </ul>
+        </div>
 
-    <script defer src='main.js'></script>
+        <div>
+            <button id="themeButton">Switch To Dark Theme</button>
+        </div>
+
+        <script defer src='main.js'></script>
 </body>
 
 </html>
