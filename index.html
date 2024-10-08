@@ -15,59 +15,70 @@
 
 <body>
 
+
     <div class="container">
-        <h2> Welcome to Jimmys</h2>
-        <h1> To-Do List</h1>
-        <div class="background-container">
-            <div class="day-night"></div>
+        <div class="animate">
 
-
-        </div>
-
-
-        <div>
-            <label for="input1"></label>
-            <input type="text" name="input1" placeholder="Enter a task" id="inputTodo">
-            <button type="button" id="addBtn">Add</button>
-
-            <h2>Task To-Do</h2>
-
-            <ul id="Saved-list"></ul>
-            <small id="infoText"></small>
-
-            <div class="main">
-            </div>
-            <h4>Click the task to complete or undo</h4>
+            <h1>My ToDo</h1>
 
             <p id="countTodo">0 Completed
-            <ul id="incomplete-task">
-
-            </ul>
 
             </p>
-        </div>
-
-        </ul>
 
 
-        <button id="completed-Btn">Show completed tasks</button>
-        <div id="completed-task-list" style="display: none;">
-            <ul id="completed-tasks">
+
+            <div>
+                <label for="input1"></label>
+                <input type="text" name="input1" id="inputTodo">
+                <button type="button" id="addBtn">OK</button>
+                <div id="infoText"></div>
+
+
+
+
+            </div>
 
             </ul>
-        </div>
-        <div class="box">
-            <ul id="completed-tasks" style="display: none;">
-            </ul>
+            <ul id="incomplete-task">
+
 
             </ul>
+
+
+
+
+
+
+            <div id="completed-task-list" style="display: none;">
+                <ul id="completed-tasks">
+
+
+
+
+
+                </ul>
+            </div>
+            <div class="box">
+                <ul id="completed-tasks" style="display: none;"></ul>
+                </ul>
+
+
+                <ul id="Saved-list"></ul>
+                <small id="infoText"></small>
+
+
+                <div class="main">
+                </div>
+
+
+
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <button id="themeButton">Switch To Dark Theme</button>
-        </div>
+    </div>
 
-        <script defer src='main.js'></script>
+    <script defer src='main.js'></script>
 </body>
 
 </html>

@@ -27,7 +27,15 @@ addBtn.addEventListener("click", function () {
 
     // Check if input is empty
     if (text.length === 0) {
-        infoText.innerText = "YOU NEED TO WRITE A TASK";
+        infoText.innerText = "input must not be empty";
+
+         // animation rerun
+         infoText.style.animation = 'none'; // deleting the anime
+         infoText.offsetHeight; // restart animation when pressing
+         infoText.style.animation = null;
+         
+
+
         return;
     } else {
         infoText.innerText = ""; // Clear the info text
@@ -53,16 +61,19 @@ addBtn.addEventListener("click", function () {
         } else {
             completedCount++;
             todoItem.setAttribute("class", "completed");
-            completedTaskList.appendChild(todoItem); // Move to completed list
+            //completedTaskList.appendChild(todoItem); // Move to completed list
             let todoText = todoItem.firstChild.textContent;
             changeStatus(todoText, true);
         }
-        countTodo.innerText = `Number of completed to-dos: ${completedCount}`;
+        countTodo.innerText = `${completedCount} completed`;
     });
 
+
+ 
     // Create trash button for each item
     const trashcan = document.createElement("button");
-    trashcan.innerHTML = '<i class="fas fa-trash"></i>';
+    trashcan.innerHTML = '🗑️'; // Trashcan icon
+    trashcan.classList.add("delete-btn"); // Add class for styling
     todoItem.appendChild(trashcan);
 
     // Add event listener to remove the item
@@ -76,7 +87,7 @@ addBtn.addEventListener("click", function () {
 
         if (todoItem.classList.contains("completed")) {
             completedCount--;
-            countTodo.innerText = `Number of completed to-dos: ${completedCount}`;
+            countTodo.innerText = `${completedCount} completed`;
         }
         todoItem.remove(); // Remove item from counter
     });
@@ -94,27 +105,3 @@ addBtn.addEventListener("click", function () {
     inputTodo.value = "";
 });
 
-// Event listener to toggle visibility of completed tasks
-completedBtn.addEventListener("click", function () {
-    if (completedTaskList.style.display === 'none' || completedTaskList.style.display === "") {
-        completedTaskList.style.display = 'block'; // Show the box
-        this.textContent = 'Hide completed tasks'; // Change button text
-    } else {
-        completedTaskList.style.display = 'none'; // Hide the box
-        this.textContent = 'Show completed tasks'; // Change button text
-    }
-});
-
-document.addEventListener('DOMContentLoaded',function(){
-    const themeButton = document.getElementById('themeButton');
-    const body = document.body;
-    themeButton.addEventListener('click',function(){
-        if (body.classList.contains('dark-theme')){
-            body.classList.remove('dark-theme');
-            themeButton.textContent = 'Switch To Dark Theme';
-        } else {
-            body.classList.add('dark-theme');
-            themeButton.textContent = 'Switch To Light Theme';
-        }
-    })
-});
